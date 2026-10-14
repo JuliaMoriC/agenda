@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda — Controle de Serviços</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">▦</div>
+        <div><strong>Agenda</strong><span>Controle de Serviços</span></div>
+      </div>
+      <nav id="navigation">
+        <button class="nav-item active" data-page="dashboard"><span>⌂</span>Dashboard</button>
+        <button class="nav-item" data-page="agendamentos"><span>▣</span>Agendamentos</button>
+        <button class="nav-item" data-page="servicos"><span>⚒</span>Serviços</button>
+        <button class="nav-item" data-page="clientes"><span>♙</span>Clientes</button>
+        <button class="nav-item" data-page="usuarios"><span>♧</span>Usuários</button>
+        <button class="nav-item" data-page="acessos"><span>♙</span>Tipos de Acesso</button>
+      </nav>
+      <div class="sidebar-note"><span>✦</span><p>Organize seus serviços de forma simples e eficiente.</p></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <label class="global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Buscar..."></label>
+        <div class="topbar-right"><button class="icon-button" title="Notificações">♧<i></i></button><div class="avatar">JM</div><div class="profile"><strong>Julia Mori</strong><span>Administradora</span></div><span class="chevron">⌄</span></div>
+      </header>
+      <section id="pageContent" class="page-content"></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head"><div><h2 id="modalTitle">Novo cadastro</h2><p id="modalSubtitle">Preencha os dados abaixo</p></div><button class="close-modal" id="closeModal" aria-label="Fechar">×</button></div>
+      <form id="entityForm"><div id="formFields" class="form-grid"></div><div class="modal-actions"><button type="button" class="btn btn-ghost" id="cancelModal">Cancelar</button><button type="submit" class="btn btn-primary">✓ Salvar</button></div></form>
+    </section>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
